@@ -1,7 +1,8 @@
 baseURL = 'https://lucasanaloggit.github.io/'
-locale = 'en-us'
-defaultContentLanguage = 'en'
-title = 'Lucas Analog Blog'
+languageCode = 'zh-cn'
+locale = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
+title = '模拟IC设计博客'
 theme = 'hugo-blog-awesome'
 enableEmoji = true
 relativeURLs = false
@@ -14,10 +15,46 @@ canonifyURLs = false
     unsafe = true
 
 [params]
-  sitename = 'Lucas Analog Blog'
-  description = 'Personal notes on analog IC design and engineering.'
+  sitename = '模拟IC设计博客'
+  description = '分享模拟IC设计原理，IC自动化设计，AI agent相关文章'
   mainSections = ['posts']
   defaultColor = 'auto'
   toc = true
   tocOpen = false
   goToTop = true
+
+[params.author]
+  intro = '模拟IC设计博客'
+  name = '模拟IC设计博客'
+  description = '分享模拟IC设计原理，IC自动化设计，AI agent相关文章'
+
+[menu]
+  [[menu.main]]
+    pageRef = '/'
+    name = 'Home'
+    url = '/'
+    weight = 10
+
+  [[menu.main]]
+    pageRef = 'posts'
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+
+  [[menu.main]]
+    pageRef = 'categories/模拟IC自动化设计'
+    name = '模拟IC自动化设计'
+    url = '/categories/模拟ic自动化设计/'
+    weight = 30
+
+  [[menu.main]]
+    pageRef = 'analog-circuit-system-theory'
+    name = '模拟电路与系统论'
+    url = '/analog-circuit-system-theory/'
+    weight = 40
+
+  [[menu.main]]
+    pageRef = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 50

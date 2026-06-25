@@ -2,8 +2,8 @@
 title: "Lab 4"
 date: 2026-06-25
 draft: false
-tags: ["Analog IC", "Blog"]
-categories: ["Notes"]
+tags: ["模拟IC", "IC自动化设计", "AI Agent"]
+categories: ["模拟IC自动化设计"]
 ---
 
 **模拟电路自动化设计工程报告**  
