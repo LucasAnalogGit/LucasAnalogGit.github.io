@@ -1,0 +1,30 @@
+public/
+resources/_gen/
+.hugo_build.lock
+.DS_Store
+*.log
+
+# Do not publish generated output or local metadata.
+resources/
+
+# Keep vendored theme commits focused on files Hugo needs to build.
+LICENSE
+**/LICENSE
+**/LICENSE.*
+themes/**/.devcontainer/
+themes/**/.github/
+themes/**/exampleSite/
+themes/**/CHANGELOG.md
+themes/**/CODE_OF_CONDUCT.md
+themes/**/CONTRIBUTING.md
+themes/**/MIGRATION.md
+themes/**/README.md
+themes/**/.release-please-manifest.json
+themes/**/netlify.toml
+themes/**/release-please-config.json
+themes/**/renovate.json
+themes/**/images/
+themes/**/.editorconfig
+themes/**/.gitattributes
+themes/**/.gitignore
+themes/**/go.mod

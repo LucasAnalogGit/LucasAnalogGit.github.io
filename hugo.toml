@@ -1,0 +1,23 @@
+baseURL = 'https://lucasanaloggit.github.io/'
+locale = 'en-us'
+defaultContentLanguage = 'en'
+title = 'Lucas Analog Blog'
+theme = 'hugo-blog-awesome'
+enableEmoji = true
+relativeURLs = false
+canonifyURLs = false
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+  sitename = 'Lucas Analog Blog'
+  description = 'Personal notes on analog IC design and engineering.'
+  mainSections = ['posts']
+  defaultColor = 'auto'
+  toc = true
+  tocOpen = false
+  goToTop = true
