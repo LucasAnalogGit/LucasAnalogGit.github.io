@@ -1,9 +1,11 @@
 ---
-title: "virtuoso-bridge搭建与模拟IC自动化设计"
+title: "一、virtuoso-bridge搭建与模拟IC自动化设计"
 date: 2026-06-25
 draft: false
 categories: ["模拟IC自动化设计"]
 tags: ["模拟IC", "Virtuoso", "SKILL", "Spectre", "EDA自动化", "AI Agent", "virtuoso-bridge", "IC自动化设计"]
+series: ["模拟IC自动化设计"]
+weight: 1
 ---
 
 # 基于 virtuoso-bridge 的 Cadence Virtuoso 自动化接口搭建

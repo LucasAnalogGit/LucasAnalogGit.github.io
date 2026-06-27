@@ -1,9 +1,11 @@
 ---
-title: "使用 SKILL 自动生成模拟电路原理图"
-date: 2026-06-25
+title: "二、使用 SKILL 自动生成模拟电路原理图"
+date: 2026-06-26
 draft: false
 categories: ["模拟IC自动化设计"]
-tags: ["模拟IC", "Cadence Virtuoso", "SKILL", "EDA自动化", "原理图生成", "AI Agent", "Spectre", "IC自动化设计", "Virtuoso", "原理图自动生成"]
+tags: ["模拟IC", "Cadence Virtuoso", "SKILL", "EDA自动化", "原理图生成", "AI Agent", "Spectre", "IC自动化设计", "Virtuoso"]
+series: ["模拟IC自动化设计"]
+weight: 2
 ---
 
 # 使用 SKILL 自动生成模拟电路原理图

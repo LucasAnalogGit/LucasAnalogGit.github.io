@@ -1,9 +1,11 @@
 ---
-title: "基于 Spectre/OCEAN 的模拟电路自动仿真流程"
-date: 2026-06-25
+title: "三、基于 Spectre/OCEAN 的模拟电路自动仿真流程"
+date: 2026-06-27
 draft: false
 categories: ["模拟IC自动化设计"]
-tags: ["模拟IC", "Cadence Virtuoso", "Spectre", "OCEAN", "EDA自动化", "仿真流程", "AI Agent", "IC自动化设计", "Virtuoso", "自动仿真"]
+tags: ["模拟IC", "Cadence Virtuoso", "Spectre", "OCEAN", "EDA自动化", "仿真流程", "AI Agent", "IC自动化设计", "Virtuoso"]
+series: ["模拟IC自动化设计"]
+weight: 3
 ---
 
 # 基于 Spectre/OCEAN 的模拟电路自动仿真流程

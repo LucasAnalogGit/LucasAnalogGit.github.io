@@ -34,6 +34,90 @@ python3 scripts/import_md_to_blog.py /home/lucas/Blogs/Documents/贝叶斯算法
 
 建议为中文标题文章显式传入英文 slug，避免中文 URL 或自动 fallback 文件名不够直观。
 
+## 指定发布日期
+
+使用 `--date` 明确设置文章发布日期。日期必须是 `YYYY-MM-DD` 格式：
+
+```bash
+python3 scripts/import_md_to_blog.py /path/to/article.md \
+  --title "文章标题" \
+  --slug article-slug \
+  --date 2026-06-27
+```
+
+如果不传 `--date`，新文章默认使用当前日期；已有 front matter 的文章会保留原有 `date`。
+
+## 导入系列文章
+
+使用 `--series` 写入 Hugo front matter：
+
+```yaml
+series: ["模拟IC自动化设计"]
+```
+
+使用 `--series-index` 写入章节顺序：
+
+```yaml
+weight: 3
+```
+
+示例：
+
+```bash
+python3 scripts/import_md_to_blog.py /path/to/article.md \
+  --title "基于 Spectre/OCEAN 的模拟电路自动仿真流程" \
+  --slug spectre-ocean-automatic-simulation-flow \
+  --category "模拟IC自动化设计" \
+  --series "模拟IC自动化设计" \
+  --series-index 3 \
+  --date 2026-06-27
+```
+
+## 自动添加中文章节标题
+
+传入 `--title-prefix` 时，脚本会根据 `--series-index` 给标题添加中文章节前缀：
+
+```bash
+python3 scripts/import_md_to_blog.py /path/to/article.md \
+  --title "基于 Spectre/OCEAN 的模拟电路自动仿真流程" \
+  --series-index 3 \
+  --title-prefix
+```
+
+生成的标题为：
+
+```yaml
+title: "三、基于 Spectre/OCEAN 的模拟电路自动仿真流程"
+```
+
+如果标题已经以 `一、`、`二、`、`三、` 等前缀开头，脚本不会重复添加。
+
+## 更新系列专栏页
+
+使用 `--update-series-page` 自动扫描 `content/posts/`，把 categories 或 series 中包含 `模拟IC自动化设计` 的文章按 `weight` 从小到大列入：
+
+```text
+content/analog-ic-automation.md
+```
+
+没有 `weight` 的文章会排在已有 `weight` 的文章之后。
+
+完整示例：
+
+```bash
+python3 scripts/import_md_to_blog.py \
+  "/home/lucas/Blogs/Documents/3.基于Spectre_OCEAN的模拟电路自动仿真流程.md" \
+  --title "基于 Spectre/OCEAN 的模拟电路自动仿真流程" \
+  --slug spectre-ocean-automatic-simulation-flow \
+  --category "模拟IC自动化设计" \
+  --series "模拟IC自动化设计" \
+  --series-index 3 \
+  --title-prefix \
+  --date 2026-06-27 \
+  --tags "模拟IC,IC自动化设计,AI Agent,Spectre,OCEAN,Virtuoso,EDA自动化" \
+  --update-series-page
+```
+
 ## Dry Run
 
 只查看将要导入的目标路径、标题、分类和标签，不写文件，不执行 Hugo 构建：
