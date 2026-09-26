@@ -59,6 +59,10 @@ content:
         label: 草稿
         type: boolean
         default: true
+      - name: math
+        label: 数学公式
+        type: boolean
+        default: false
       - name: body
         label: 正文
         type: rich-text

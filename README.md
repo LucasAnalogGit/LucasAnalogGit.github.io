@@ -9,7 +9,7 @@
 
 新文章创建时，建议在 Pages CMS 的文件名输入框填写稳定的英文短名（例如 `my-new-post.md`）。URL 由文件名决定，标题修改不会改 URL；后台也已关闭现有文章的重命名操作。
 
-图片在 Pages CMS 媒体库上传和管理，文件写入 `static/images/`，正文使用 `/images/...` 路径。正文编辑器可切换到 **Source** 模式，带有 LaTeX、Hugo shortcode 或复杂代码块的文章建议用此模式编辑并检查生成的 Markdown。主题已有 KaTeX 支持；需要数学公式的文章可在 front matter 加 `math: true`，Pages CMS 会保留未配置的 front matter 字段。手动维护的系列导航页 `content/analog-ic-automation.md` 不会由 CMS 自动更新；新的系列归档位于 `/series/`，按 `weight` 排序。
+图片在 Pages CMS 媒体库上传和管理，文件写入 `static/images/`，正文使用 `/images/...` 路径。正文编辑器可切换到 **Source** 模式，带有 LaTeX、Hugo shortcode 或复杂代码块的文章建议用此模式编辑并检查生成的 Markdown。需要数学公式的文章在后台开启“数学公式”（对应 `math: true`）；Pages CMS 也会保留未配置的 front matter 字段。手动维护的系列导航页 `content/analog-ic-automation.md` 不会由 CMS 自动更新；新的系列归档位于 `/series/`，按 `weight` 排序。
 
 ## 项目级扩展位置
 
