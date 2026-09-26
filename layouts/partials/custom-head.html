@@ -1,0 +1,5 @@
+{{- /* The theme calls this project-level hook from its head partial. */ -}}
+{{- with resources.Get "css/custom.css" -}}
+    {{- $style := . | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+{{- end -}}

@@ -8,6 +8,11 @@ enableEmoji = true
 relativeURLs = false
 canonifyURLs = false
 
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  series = 'series'
+
 [markup]
   [markup.highlight]
     noClasses = false
