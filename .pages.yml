@@ -1,0 +1,68 @@
+# Pages CMS edits the same Markdown files used by the local import script.
+media:
+  input: static/images
+  output: /images
+  categories: [image]
+  rename: safe
+
+settings:
+  content:
+    merge: true
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    filename:
+      template: "{primary}.md"
+      field: create
+    operations:
+      rename: false
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: date
+        label: 日期
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: categories
+        label: 分类
+        type: string
+        list: true
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: series
+        label: 系列
+        type: string
+        list: true
+      - name: weight
+        label: 系列序号
+        type: number
+        options:
+          min: 1
+      - name: draft
+        label: 草稿
+        type: boolean
+        default: true
+      - name: body
+        label: 正文
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+          path: posts
